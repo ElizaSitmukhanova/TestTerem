@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Sometype+Mono&display=swap');
+body {
+    margin: 0;
+    background-color: #fac0ee;
+    font-family: 'Sometype Mono', monospace;
+    
+}
+
+.content {
+    margin: 50px;
+}
+.select {
+    margin: 0 auto;
+
+     
+    border-bottom: solid 2px #65063f;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.name {
+    margin-top: 25px;
+    margin-bottom: 1rem;
+}
+/* .check {
+    display: flex;
+} */
+
+.label {
+  display: block;
+    margin-bottom: 0.25rem;
+}
+
+.input {
+    display: block;
+    width: 100px;
+    height: 25px;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #601c46;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+}
+
+.btn {
+    margin-top: 25px;
+    background-color: #641637; 
+    border: none;
+    color: white;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #3b051c; 
+}   
+
+

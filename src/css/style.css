@@ -1,0 +1,35 @@
+.block {
+    height: 100px;
+    border: 1px solid #111;
+
+}
+.block_dashed {
+    border: 1px dashed #111;
+}
+.btn {
+    margin: 45px;
+}
+.block_green {
+    background-color: green;
+}
+.block_red {
+    background-color: red;
+}
+.block_black {
+    background-color: black;
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+@media (max-width: 320px) {  
+   .block {
+    display: block;
+    width: 100%;
+    
+   }
+   
+ }
