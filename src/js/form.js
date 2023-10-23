@@ -1,6 +1,6 @@
    // Создаем массив с названиями полей и количеством повторений
     const fields = [
-      { name: "select", count: 5, label: "Выберите цифру от 1 до 5:" },
+      { name: "select", count: 5, label: "Оцените ваш город от 1 до 5:" },
     ];
 
     // Функция для создания элементов формы
@@ -39,7 +39,7 @@
       }
     });
 
-
+//Отправка данных 
 const form = document.querySelector('#form');
 const message = {
     loading: 'Идет загрузка данных',
@@ -64,10 +64,7 @@ form.addEventListener('submit', (e) => {
 
     const formData = new FormData(form);
     const json = JSON.stringify(Object.fromEntries(formData.entries()));
-/*     document.getElementById('result').innerHTML = JSON.stringify(json); */
-
-const resultText = document.createTextNode(JSON.stringify(json));
-document.getElementById("result").appendChild(resultText);
+    document.getElementById('result').innerHTML = JSON.stringify(json);
 
     getData('http://localhost:3000/requests')
         .then(data => {
