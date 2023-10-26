@@ -3,47 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест:форма</title>
+    <title>Тест: форма</title>
     <meta name="description" content="lorem ipsum" />
     <link rel="stylesheet" href="css/form.css" />
 </head>
 <body>
-    <div id="main">
-        <main class="content">
-            <header>
-                <h1>Введите следующие данные</h1>
-            </header>
-            <section class="form">
-                <form id="form">
-                    
-               <div class="check" id="check"> 
-                
-               </div>
-
-                    <div class="name">
-                        <label class="label" for="name">Введите имя:</label>
-                        <input class= "input" type="text" id="name" name="name" placeholder="Иван"> 
-                    </div> 
-                    <div class="city">
-                        <label class="label" for="city">Выберите город:</label>
-                        <input class="input" type="text" id="city" name="city" placeholder="Москва"> 
-                    </div> 
-                        
-                     
-                    <button class="btn">Отправить</button> 
-                </form>
-            </section>
-        </main>
-        <main class="content">
-            <h2>Ответ</h2>
-            <div id="result" class="result"></div>
-        </main>
+    <div class="wrapper">
+        <div class="title">Пройдите опрос о благоустройстве Вашего города</div>
+        <form id="form">
+            <div class="dropdown">
+                <label for="select1">Как Вы охарактеризуете текущее состояние города:</label>
+                <select id="select1" name="select1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="select2">Как вы оцените состояние автомобильных дорог в Вашем городе:</label>
+                <select id="select2" name="select2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="select3">Как вы оцениваете работу здравоохранения:</label>
+                <select id="select3" name="select3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="select4">Как Вы оцениваете культурную деятельность: </label>
+                <select id="select4" name="select4">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="dropdown"> <label for="select5">Как вы оцениваете имеющиеся условия для занятий физической
+                    культурой и спортом:</label>
+                <select id="select5" name="select5">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="name">
+                <label class="label" for="name">Введите имя:</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Иван">
+            </div>
+            <div class="city">
+                <label class="label" for="city">Выберите город:</label>
+                <input class="input" type="text" id="city" name="city" placeholder="Москва">
+            </div>
+            <button class="btn">Отправить</button>
+        </form>
+        <div class="answer">Ответ:</div>
+        <div id="result" class="result"></div>
+        <a href="/src/index.html" class="link">Вернуться к главной</a>
     </div>
-    <div id="footer">
-        <footer class="content"><a href="/src/index.html">Вернуться к главной</a></footer>
-    </div>
-<script src="js/form.js"></script>
-
- 
+    <script src="js/fetch.js"></script>
 </body>
 </html>

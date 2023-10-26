@@ -1,35 +1,53 @@
 .block {
     height: 100px;
     border: 1px solid #111;
+}
 
-}
-.block_dashed {
-    border: 1px dashed #111;
-}
 .btn {
     margin: 45px;
 }
-.block_green {
+
+.block_left {
     background-color: green;
 }
-.block_red {
+
+.block_middle {
     background-color: red;
+    border: 1px dashed #111;
 }
-.block_black {
+
+.block_right {
     background-color: black;
 }
+
+.modal {
+    display: block;
+}
+
 .hide {
     display: none;
 }
-
+ 
 .show {
     display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
-@media (max-width: 320px) {  
-   .block {
-    display: block;
-    width: 100%;
-    
-   }
-   
- }
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .block {
+        display: block;
+        width: 100%;
+    }
+}

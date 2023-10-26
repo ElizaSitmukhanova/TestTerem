@@ -6,13 +6,24 @@ body {
     
 }
 
-.content {
-    margin: 50px;
+.wrapper {
+    width: 750px;
+    display: block;
+    margin: 0 auto;
+    
 }
+.title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.dropdown {
+    padding-top: 20px;
+}
+
 .select {
     margin: 0 auto;
-
-     
     border-bottom: solid 2px #65063f;
     border-top: none;
     border-left: none;
@@ -22,12 +33,9 @@ body {
     margin-top: 25px;
     margin-bottom: 1rem;
 }
-/* .check {
-    display: flex;
-} */
 
 .label {
-  display: block;
+    display: block;
     margin-bottom: 0.25rem;
 }
 
@@ -66,4 +74,17 @@ body {
     background-color: #3b051c; 
 }   
 
+.answer {
+    margin: 25px;
+    color: #960a0a;
+}
+.result {
+    text-align: center;
+}
+.link {
+    color: #f6f0f0;
+}
+.link:hover {
+    color: #000;
+}
 

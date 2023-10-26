@@ -1,37 +1,32 @@
 const firstBtn = document.querySelector('#firstBtn'),
     secondBtn = document.querySelector('#secondBtn'),
-    firstBlock = document.querySelector('.col-12');
+    firstBlock = document.querySelector('.col-12'),
+    leftBlock = document.querySelector(".block_left"),
+    middleBlock = document.querySelector(".block_middle"),
+    modal = document.querySelector('.modal'),
+    btnClose = document.querySelector('.btn-close');
 
-firstBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log("hello");
-    firstBlock.classList.toggle('hide')
-});
+let blocks = [ leftBlock, middleBlock ];
 
+const hideElem = (elem) => {
+    elem.classList.toggle('hide');
+};
 
-const leftBlock = document.querySelector(".block_green"),
-      middleBlock = document.querySelector(".block_dashed");
-let isSwapped = false;
+const switchElem = () => {
+    blocks.forEach(item => {
+        if (item.classList.contains('block_left')) {
+            item.classList.remove('block_left');
+            item.classList.add('block_middle');
+        } else {
+            item.classList.remove('block_middle');
+            item.classList.add('block_left');
+        } 
+    })
+}
 
-secondBtn.addEventListener("click", function () {
-    if (!isSwapped) {
-        leftBlock.parentNode.insertBefore(middleBlock, leftBlock);
-        isSwapped = true;
-    } else {
-        leftBlock.parentNode.insertBefore(leftBlock, middleBlock);
-        isSwapped = false;
-    }
-    console.log(1)
-}); 
-
-const modal = document.querySelector('.modal'),
-btnClose = document.querySelector('.btn-close');
-
-btnClose.addEventListener('click', () => {
-    console.log(45)
-    modal.classList.remove('show');
-    modal.classList.add('hide');
-})
+firstBtn.addEventListener('click',() => hideElem(firstBlock));
+btnClose.addEventListener('click', () => hideElem(modal));
+secondBtn.addEventListener("click", () => switchElem());
 
 
  
