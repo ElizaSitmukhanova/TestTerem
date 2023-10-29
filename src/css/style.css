@@ -6,18 +6,23 @@
 .btn {
     margin: 45px;
 }
-
+.row {
+    display: flex;
+}
 .block_left {
     background-color: green;
+    order: -1;
 }
 
 .block_middle {
     background-color: red;
     border: 1px dashed #111;
+    
 }
 
 .block_right {
     background-color: black;
+    
 }
 
 .modal {
@@ -50,4 +55,9 @@
         display: block;
         width: 100%;
     }
+}
+
+
+.btn-success:active ~  .block_left {
+    order: 1;
 }

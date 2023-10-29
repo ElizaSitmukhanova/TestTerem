@@ -6,28 +6,21 @@ const firstBtn = document.querySelector('#firstBtn'),
     modal = document.querySelector('.modal'),
     btnClose = document.querySelector('.btn-close');
 
-let blocks = [ leftBlock, middleBlock ];
+
 
 const hideElem = (elem) => {
     elem.classList.toggle('hide');
 };
 
-const switchElem = () => {
-    blocks.forEach(item => {
-        if (item.classList.contains('block_left')) {
-            item.classList.remove('block_left');
-            item.classList.add('block_middle');
-        } else {
-            item.classList.remove('block_middle');
-            item.classList.add('block_left');
-        } 
-    })
-}
+/* const switchElem = () => {
+   leftBlock.style.order = 2;
+   middleBlock.style.order = 1;
+} */
 
 firstBtn.addEventListener('click',() => hideElem(firstBlock));
 btnClose.addEventListener('click', () => hideElem(modal));
-secondBtn.addEventListener("click", () => switchElem());
-
+/* secondBtn.addEventListener("click", () => switchElem()); */
+ 
 
  
 
