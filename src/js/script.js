@@ -11,19 +11,18 @@ const hideElem = (elem) => {
 };
 
 const switchElem = () => {
-    if (leftBlock.style.order === '1') {
-        leftBlock.style.order = '2';
-        middleBlock.style.order = '1';
-      } else {
-        leftBlock.style.order = '1';
-        middleBlock.style.order = '2';
-      }
+    const leftBlockOrder = leftBlock.style.order,
+        middleBlockOrder = middleBlock.style.order;
+
+    leftBlock.style.order = middleBlockOrder;
+    middleBlock.style.order = leftBlockOrder;
+
 }
 
-firstBtn.addEventListener('click',() => hideElem(firstBlock));
+firstBtn.addEventListener('click', () => hideElem(firstBlock));
 btnClose.addEventListener('click', () => hideElem(modal));
 secondBtn.addEventListener("click", () => switchElem());
- 
+
 
  
 

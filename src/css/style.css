@@ -11,20 +11,17 @@
 }
 .block_left {
     background-color: green;
-    order: 1;
+
 }
 
 .block_middle {
     background-color: red;
     border: 1px dashed #111;
-    order: 2;
-    
 }
 
 .block_right {
     background-color: black;
     order: 3;
-    
 }
 
 .modal {

@@ -1,5 +1,5 @@
-      const form = document.querySelector('#form'),
-      result = document.querySelector('#result');
+const form = document.querySelector('#form'),
+    result = document.querySelector('#result');
 
 const message = {
     success: 'Успешно! Все данные отправлены! Спасибо!',
@@ -33,4 +33,3 @@ form.addEventListener('submit', (e) => {
         });
 });
 
- 
