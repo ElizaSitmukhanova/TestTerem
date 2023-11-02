@@ -22,6 +22,7 @@ form.addEventListener('submit', (e) => {
     const json = JSON.stringify(Object.fromEntries(formData.entries()));
     result.innerHTML = json;
     let url = 'http://localhost:3000/requests?' + new URLSearchParams(formData).toString();
+    console.log(url)
 
     getData(url)
         .then(data => {
