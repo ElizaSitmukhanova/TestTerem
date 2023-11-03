@@ -5,17 +5,13 @@ const firstBtn = document.querySelector('#firstBtn'),
     modal = document.querySelector('.modal'),
     btnClose = document.querySelector('.btn-close');
 
-const hideElem = (elem) => {
-    elem.classList.toggle('hide');
+const toggleElem = (elem, classActive) => {
+    elem.classList.toggle(classActive);
 };
 
-const switchElem = () => {
-    leftBlock.classList.toggle('block_order');
-}
-
-firstBtn.addEventListener('click', () => hideElem(firstBlock));
-btnClose.addEventListener('click', () => hideElem(modal));
-secondBtn.addEventListener("click", () => switchElem());
+firstBtn.addEventListener('click', () => toggleElem(firstBlock, 'hide'));
+btnClose.addEventListener('click', () => toggleElem(modal, 'hide'));
+secondBtn.addEventListener("click", () => toggleElem(leftBlock, 'order'));
 
 
  
