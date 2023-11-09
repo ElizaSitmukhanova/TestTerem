@@ -13,7 +13,7 @@
 
 .block_left {
     background-color: green;
-    order: -1;
+
 }
 
 .block_middle {
@@ -23,11 +23,10 @@
 
 .block_right {
     background-color: black;
-    order: 3; 
 }
 
 .order {
-    order: 1;
+    order: -1;
 }
 
 .modal {
